@@ -1,0 +1,16 @@
+{
+  "name": "mini.fetch-pokemon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:aizhanti/cc12-mini.fetch-pokemon.git",
+  "author": "aizhanti <>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha ./tests/_pokemonager.js"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
+    "node-fetch": "^2.6.0"
+  }
+}
