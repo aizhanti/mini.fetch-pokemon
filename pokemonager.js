@@ -18,11 +18,6 @@
 
     findUnderWeight(weight) {
       //   // Your code here.
-      //   const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=" + 10);
-      //   const tenPokemons = await response.json();
-      //   let urls = await tenPokemons.results.map((path) => path["url"]);
-      //   console.log(urls);
-      // };
 
       return fetch("https://pokeapi.co/api/v2/pokemon?limit=" + 10)
         .then((response) => response.json())
@@ -40,7 +35,6 @@
         });
       // ** LIMIT TO THE FIRST 10 POKEMON
       // We don't want to make too many unnecessary calls to the Pokemon API
-      // findUnderWeight(weight)
     }
   }
 
