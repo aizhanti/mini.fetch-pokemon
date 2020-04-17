@@ -10,7 +10,7 @@ describe("pokemonager", () => {
   it("should return an array of names of all Pokemon", () => {
     let called = false;
     const realMap = Array.prototype.map;
-    Array.prototype.map = function() {
+    Array.prototype.map = function () {
       called = true;
       return realMap.apply(this, arguments);
     };
@@ -27,12 +27,13 @@ describe("pokemonager", () => {
   it("should find pokemon that are under a given weight", () => {
     let called = false;
     const realFilter = Array.prototype.filter;
-    Array.prototype.filter = function() {
+    Array.prototype.filter = function () {
       called = true;
       return realFilter.apply(this, arguments);
     };
 
     return pokemonager.findUnderWeight(100).then((actual) => {
+      console.log(actual);
       expect(actual.length).to.equal(4);
       expect(Array.isArray(actual)).to.equal(true);
       expect(actual.map((pokemon) => pokemon.name)).to.deep.equal(underWeight);
