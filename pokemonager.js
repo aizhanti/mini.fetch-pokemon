@@ -10,7 +10,7 @@
           return pokemonNames;
         })
         .catch((err) => {
-          console.log("Try again!");
+          console.error("Try again!", err);
         });
     }
 
@@ -31,7 +31,7 @@
           return pokemons.filter((pokemon) => pokemon.weight < weight);
         })
         .catch((err) => {
-          console.log("Try again!");
+          console.error("Try again!", err);
         });
       // ** LIMIT TO THE FIRST 10 POKEMON
       // We don't want to make too many unnecessary calls to the Pokemon API
